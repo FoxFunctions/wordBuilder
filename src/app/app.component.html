@@ -1,11 +1,11 @@
 <div class="word-container">
   <h2>Your Word</h2>
 
-  <div cdkDropList cdkDropListOrientation="horizontal" #todoList="cdkDropList" [cdkDropListData]="myWord"
-    [cdkDropListConnectedTo]="[doneList]" class="example-list" (cdkDropListDropped)="drop($event)">
+  <div cdkDropList cdkDropListOrientation="horizontal" #wordList="cdkDropList" [cdkDropListData]="myWord"
+    [cdkDropListConnectedTo]="[alphabetList]" class="example-list" (cdkDropListDropped)="drop($event)">
     <div class="example-box" *ngFor="let myWord of myWord" cdkDrag>{{myWord}}</div>
-  </div>
-</div>
+  </div> 
+</div> 
 <br>
 <br>
 <br>
@@ -13,14 +13,14 @@
 <div class="alphabet-container">
   <h2>Your alphabet</h2>
 
-  <div cdkDropList cdkDropListOrientation="horizontal" #doneList="cdkDropList" [cdkDropListData]="usersAlphabet"
-    [cdkDropListConnectedTo]="[todoList]" class="example-list" (cdkDropListDropped)="drop($event)">
+   <div cdkDropList cdkDropListOrientation="horizontal" #alphabetList="cdkDropList" [cdkDropListData]="usersAlphabet"
+    [cdkDropListConnectedTo]="[wordList]" class="example-list" (cdkDropListDropped)="drop($event)">
     <div class="example-box" *ngFor="let usersAlphabet of usersAlphabet" cdkDrag>{{usersAlphabet}}</div>
   </div>
-</div>
+</div> 
 <br>
 <button (click)="clearWordList()">Reset Word Bar</button>
 
 
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> 

@@ -9,8 +9,6 @@ import { Constants } from './constants';
   styleUrls: ['./app.component.css']
 })
 
-
-
 export class AppComponent {
   title = 'wordBuilder';
   

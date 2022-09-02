@@ -4,8 +4,9 @@ import 'zone.js/testing';
 import { getTestBed } from '@angular/core/testing';
 import {
   BrowserDynamicTestingModule,
-  platformBrowserDynamicTesting
+  platformBrowserDynamicTesting,
 } from '@angular/platform-browser-dynamic/testing';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 declare const require: {
   context(path: string, deep?: boolean, filter?: RegExp): {
