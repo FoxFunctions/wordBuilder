@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { image } from './icon';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     FormsModule,
     DragDropModule
   ],
-  providers: [],
+  providers: [image],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

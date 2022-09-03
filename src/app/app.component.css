@@ -1,34 +1,40 @@
-.word-container {
+.word-container1 {
     height: 50px;
     width: 600px;
     max-width: 100%;
-    margin: 0 25px 25px 0;
+    margin-right: auto;
+    justify-content: center;
     display: inline-block;
     vertical-align: top;
   }
 
+  .word-container{
+    margin: auto;
+    width: 800px;
+  }
+
   .alphabet-container {
-    
-    width: auto;
-    max-width: 100%;
-    margin: 0 25px 25px 0;
-    display: inline-block;
-    vertical-align: top;
+    margin: auto;
+    width: 1744px;
   }
   
-  .example-list {
+  .letter-box {
+
+    margin: auto;
     border: solid 1px #ccc;
     min-height: 60px;
     background: white;
     border-radius: 4px;
     overflow: hidden;
     display: block;
+    font-size: x-large;
   }
   
-  .example-box {
+  .letter-tiles {
+    margin: auto;
     padding: 10px 10px;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border: solid 1px #ccc;
     color: rgba(0, 0, 0, 0.87);
     cursor: move;
@@ -47,11 +53,23 @@
   }
   
   .cdk-drag-preview {
+    font-size: x-large;
     box-sizing: border-box;
     border-radius: 4px;
     box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
                 0 8px 10px 1px rgba(0, 0, 0, 0.14),
                 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  .image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .message{
+    text-align: center;
   }
   
   .cdk-drag-placeholder {

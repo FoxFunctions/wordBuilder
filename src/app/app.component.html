@@ -1,26 +1,25 @@
+<img class="image" src="{{imageHelper.placeHolderHelperIcon.directory}}" height="400">
 <div class="word-container">
-  <h2>Your Word</h2>
-
+  <h2 class="message">Drag the tiles below to spell what you see above</h2>
   <div cdkDropList cdkDropListOrientation="horizontal" #wordList="cdkDropList" [cdkDropListData]="myWord"
-    [cdkDropListConnectedTo]="[alphabetList]" class="example-list" (cdkDropListDropped)="drop($event)">
-    <div class="example-box" *ngFor="let myWord of myWord" cdkDrag>{{myWord}}</div>
-  </div> 
-</div> 
+    [cdkDropListConnectedTo]="[alphabetList]" class="letter-box" (cdkDropListDropped)="drop($event)">
+    <div class="letter-tiles" *ngFor="let myWord of myWord" cdkDrag>{{myWord}}</div>
+  </div>
+  <button (click)="spelledCorrectly()">Check your Spelling</button>
+  <button (click)="clearWordList()">Reset Word Bar</button>
+  <button (click)="iconIterator()">Next Image</button>
+</div>
 <br>
 <br>
 <br>
 <br>
 <div class="alphabet-container">
-  <h2>Your alphabet</h2>
-
-   <div cdkDropList cdkDropListOrientation="horizontal" #alphabetList="cdkDropList" [cdkDropListData]="usersAlphabet"
-    [cdkDropListConnectedTo]="[wordList]" class="example-list" (cdkDropListDropped)="drop($event)">
-    <div class="example-box" *ngFor="let usersAlphabet of usersAlphabet" cdkDrag>{{usersAlphabet}}</div>
+  <div cdkDropList cdkDropListOrientation="horizontal" #alphabetList="cdkDropList" [cdkDropListData]="usersAlphabet"
+    [cdkDropListConnectedTo]="[wordList]" class="letter-box" (cdkDropListDropped)="drop($event)">
+    <div class="letter-tiles" *ngFor="let usersAlphabet of usersAlphabet" cdkDrag>{{usersAlphabet}}</div>
   </div>
-</div> 
+</div>
 <br>
-<button (click)="clearWordList()">Reset Word Bar</button>
-
-
-
-<router-outlet></router-outlet> 
+<br>
+<h2 class="message" *ngIf="isCorrectSpelling">You spelled the word correctly!</h2>
+<router-outlet></router-outlet>
