@@ -5,9 +5,15 @@
     [cdkDropListConnectedTo]="[alphabetList]" class="letter-box" (cdkDropListDropped)="drop($event)">
     <div class="letter-tiles" *ngFor="let myWord of myWord" cdkDrag>{{myWord}}</div>
   </div>
-  <button (click)="clearWordList()">Reset Word Bar</button>
-  <button (click)="spelledCorrectly()">Check your Spelling</button>
-  <button (click)="iconIterator()">Next Image</button>
+  <br>
+  <div class="button-container">
+  <button class="button" (click)="clearWordList()">Reset word bar</button>
+  <span class="span"></span>
+  <button class="button" (click)="spelledCorrectly()">Check spelling</button>
+  <span class="span"></span>
+  <button class="button" *ngIf="!isCorrectSpelling" (click)="iconIterator()" disabled >Next image</button>
+  <button class="button" *ngIf="isCorrectSpelling" (click)="iconIterator()">Next image</button>
+  </div>
 </div>
 <br>
 <br>
@@ -22,4 +28,5 @@
 <br>
 <br>
 <h2 class="message" *ngIf="isCorrectSpelling">You spelled {{imageHelper.placeHolderHelperIcon.title}} correctly!</h2>
+<h2 class="message" *ngIf="isWrongSpelling" >Sorry, that is incorrect. Please try again.</h2>
 <router-outlet></router-outlet>

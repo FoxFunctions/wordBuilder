@@ -18,12 +18,17 @@ export class AppComponent {
   ];
   userWord: string = "";
   isCorrectSpelling: boolean = false;
+  isWrongSpelling: boolean = false;
 
   spelledCorrectly(): boolean {
     if (this.userWord == this.imageHelper.placeHolderHelperIcon.title) {
       this.isCorrectSpelling = true;
+      return this.isCorrectSpelling;
+
+    } else{
+      this.isWrongSpelling = true;
+      return this.isWrongSpelling;
     }
-    return this.isCorrectSpelling;
   }
 
   resetEnglishAlphabet(): void {
@@ -34,6 +39,7 @@ export class AppComponent {
   clearWordList(): void {
     this.myWord = [];
     this.isCorrectSpelling = false;
+    this.isWrongSpelling = false;
   }
 
   myWordToString(): string {
@@ -60,5 +66,7 @@ export class AppComponent {
     }
     this.resetEnglishAlphabet();
     this.myWordToString();
+    this.isCorrectSpelling = false;
+    this.isWrongSpelling = false;
   }
 }
