@@ -1,12 +1,3 @@
-.word-container1 {
-    height: 50px;
-    width: 600px;
-    max-width: 100%;
-    margin-right: auto;
-    justify-content: center;
-    display: inline-block;
-    vertical-align: top;
-  }
 
   .word-container{
     margin: auto;
@@ -85,7 +76,7 @@
   }
   
   .letter-box {
-
+    height: 67px;
     margin: auto;
     border: solid 1px #ccc;
     min-height: 60px;
@@ -103,7 +94,6 @@
     height: 45px;
     border: solid 1px #ccc;
     color: rgba(0, 0, 0, 0.87);
-    cursor: move;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -121,10 +111,20 @@
   .cdk-drag-preview {
     font-size: x-large;
     box-sizing: border-box;
+    background-color: #F3F4F6;
+
     border-radius: 4px;
     box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
                 0 8px 10px 1px rgba(0, 0, 0, 0.14),
                 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  .cdk-drop-list-dragging {
+    cursor: grabbing;
+  }
+
+  .cdk-drop-list-receiving{
+    cursor: grabbing;
   }
 
   .image{
@@ -152,8 +152,9 @@
     background-color: #F3F4F6;
     text-decoration: none;
     transition-duration: 0.1s;
+    cursor: grab;
   }
-  
+
   .letter-tiles:last-child {
     border: none;
   }

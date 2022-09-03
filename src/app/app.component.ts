@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
-import { image } from './icon';
+import { image } from './image';
 
 
 @Component({
@@ -12,7 +12,7 @@ import { image } from './icon';
 export class AppComponent {
   constructor(public imageHelper: image) { }
   title = 'wordBuilder';
-  usersAlphabet: string[] = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
+  usersAlphabet: string[] = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',           
     'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
   myWord: string[] = [
   ];
