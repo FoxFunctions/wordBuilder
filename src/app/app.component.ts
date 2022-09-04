@@ -17,16 +17,16 @@ export class AppComponent {
 	];
 	userWord = '';
 	isCorrectSpelling = false;
-	isWrongSpelling = false;
+	shouldShowErrorMessage = false;
+	errorMessage = '';
 
-	spelledCorrectly(): boolean {
+	spellCheck(): void {
 		if (this.userWord == this.imageHelper.placeHolderHelperIcon.title) {
 			this.isCorrectSpelling = true;
-			return this.isCorrectSpelling;
-      
 		} else{
-			this.isWrongSpelling = true;
-			return this.isWrongSpelling;
+			this.shouldShowErrorMessage = true;
+			this.isCorrectSpelling = false;
+			this.errorMessage = 'Sorry, that is incorrect. Please try again.';
 		}
 	}
 
@@ -38,7 +38,7 @@ export class AppComponent {
 	clearWordList(): void {
 		this.myWord = [];
 		this.isCorrectSpelling = false;
-		this.isWrongSpelling = false;
+		this.shouldShowErrorMessage = false;
 	}
 
 	myWordToString(): string {
@@ -66,6 +66,6 @@ export class AppComponent {
 		this.resetEnglishAlphabet();
 		this.myWordToString();
 		this.isCorrectSpelling = false;
-		this.isWrongSpelling = false;
+		this.shouldShowErrorMessage = false;
 	}
 }

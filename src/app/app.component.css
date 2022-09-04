@@ -2,11 +2,14 @@
   .word-container{
     margin: auto;
     width: 900px;
+    padding-bottom: 15px;
   }
 
   .alphabet-container {
     margin: auto;
     width: 1353px;
+    padding-top: 80px;
+    padding-bottom: 60px;
   }
 
   .button-container{
