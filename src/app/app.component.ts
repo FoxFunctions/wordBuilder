@@ -12,10 +12,7 @@ import { WordService } from './word.service';
 export class AppComponent {
 	constructor(public imageHelper: image, public word: WordService) { }
 	title = 'wordBuilder';
-	usersAlphabet: string[] = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
-		'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-	myWord: string[] = [
-	];
+
 	userWord = '';
 	isCorrectSpelling = false;
 	shouldShowErrorMessage = false;
@@ -31,20 +28,17 @@ export class AppComponent {
 		}
 	}
 
-	resetEnglishAlphabet(): void {
-		this.usersAlphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
-			'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-	}
-
-	clearWordList(): void {
-		this.myWord = [];
+	resetLetterTiles(): void {
+		this.word.resetAlphabet();
+		this.word.myWordToString();
 		this.isCorrectSpelling = false;
 		this.shouldShowErrorMessage = false;
 	}
 
-	myWordToString(): string {
-		this.userWord = this.myWord.join('');
-		return this.userWord;
+	clearWordList(): void {
+		this.word.userWord = [];
+		this.isCorrectSpelling = false;
+		this.shouldShowErrorMessage = false;
 	}
 
 	iconIterator(): void {
@@ -64,9 +58,6 @@ export class AppComponent {
 				event.currentIndex,
 			);
 		}
-		this.resetEnglishAlphabet();
-		this.myWordToString();
-		this.isCorrectSpelling = false;
-		this.shouldShowErrorMessage = false;
+		this.resetLetterTiles();
 	}
 }

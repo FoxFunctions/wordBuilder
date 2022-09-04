@@ -3,13 +3,14 @@ import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { image } from './image';
+import { WordService } from './word.service';
 
 describe('AppComponent', () => {
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
 			imports: [
 				RouterTestingModule,
-				DragDropModule
+				DragDropModule,
 			],
 			declarations: [
 				AppComponent,
@@ -31,18 +32,6 @@ describe('AppComponent', () => {
 		const fixture = TestBed.createComponent(AppComponent);
 		const app = fixture.componentInstance;
 		expect(app.title).toEqual('wordBuilder');
-	});
-
-	it('userAlphabet should have 26 strings', () => {
-		const fixture = TestBed.createComponent(AppComponent);
-		const app = fixture.componentInstance;
-		expect(app.usersAlphabet.length).toEqual(26);
-	});
-
-	it('myWord should be an empty array', () => {
-		const fixture = TestBed.createComponent(AppComponent);
-		const app = fixture.componentInstance;
-		expect(app.myWord.length).toBe(0);
 	});
 
 	it('isCorrectSpelling should be false', () => {
