@@ -10,9 +10,6 @@ chair : icon = {directory: "assets/images/chair.svg", title: 'chair'};
 fish : icon = {directory: "assets/images/fish.svg", title: 'fish'};
 flower : icon = {directory: "assets/images/flower.svg", title: 'flower'};
 hand : icon = {directory: "assets/images/hand.svg", title: 'hand'};
-
-
-
 plane : icon = {directory: "assets/images/plane.svg", title: 'plane'};
 tree : icon = {directory: "assets/images/tree.svg", title: 'tree'};
 placeHolderHelperIcon: icon = {directory: "assets/images/dog.svg", title: 'dog'};

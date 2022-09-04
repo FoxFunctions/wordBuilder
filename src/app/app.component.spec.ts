@@ -2,8 +2,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { Constants } from './constants';
-
+ß
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
