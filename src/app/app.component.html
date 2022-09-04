@@ -2,10 +2,10 @@
 
 <div class="word-container">
     <h2 class="message">Drag the tiles below to spell what you see above</h2>
-    <div cdkDropList cdkDropListOrientation="horizontal" #wordList="cdkDropList" [cdkDropListData]="myWord"
+    <div cdkDropList cdkDropListOrientation="horizontal" #wordList="cdkDropList" [cdkDropListData]="word.userWord"
         [cdkDropListConnectedTo]="[alphabetList]" class="letter-box" (cdkDropListDropped)="drop($event)">
         <div class="letter-tiles" 
-          *ngFor="let myWord of myWord" cdkDrag>{{myWord}}
+          *ngFor="let i of word.userWord" cdkDrag>{{i}}
         </div>
     </div>
 </div>
@@ -20,10 +20,10 @@
 </div>
 
 <div class="alphabet-container">
-    <div cdkDropList cdkDropListOrientation="horizontal" #alphabetList="cdkDropList" [cdkDropListData]="usersAlphabet"
+    <div cdkDropList cdkDropListOrientation="horizontal" #alphabetList="cdkDropList" [cdkDropListData]="word.alphabet"
         [cdkDropListConnectedTo]="[wordList]" class="letter-box" (cdkDropListDropped)="drop($event)">
         <div class="letter-tiles" 
-            *ngFor="let usersAlphabet of usersAlphabet" cdkDrag>{{usersAlphabet}}
+            *ngFor="let i of word.alphabet" cdkDrag>{{i}}
         </div>
     </div>
 </div>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { image } from './image';
+import { WordService } from './word.service';
 
 @Component({
 	selector: 'app-root',
@@ -9,7 +10,7 @@ import { image } from './image';
 })
 
 export class AppComponent {
-	constructor(public imageHelper: image) { }
+	constructor(public imageHelper: image, public word: WordService) { }
 	title = 'wordBuilder';
 	usersAlphabet: string[] = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
 		'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -21,7 +22,7 @@ export class AppComponent {
 	errorMessage = '';
 
 	spellCheck(): void {
-		if (this.userWord == this.imageHelper.placeHolderHelperIcon.title) {
+		if (this.word.myWordToString() == this.imageHelper.placeHolderHelperIcon.title) {
 			this.isCorrectSpelling = true;
 		} else{
 			this.shouldShowErrorMessage = true;

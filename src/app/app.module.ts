@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { image } from './image';
+import { WordService } from './word.service';
 
 @NgModule({
 	declarations: [
@@ -18,7 +19,7 @@ import { image } from './image';
 		FormsModule,
 		DragDropModule
 	],
-	providers: [image],
+	providers: [image, WordService],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }
