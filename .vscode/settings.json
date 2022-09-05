@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/fb91201c-04b8-43dc-8584-4555d5c593c9/microsoft.web/sites/subscriptions/fb91201c-04b8-43dc-8584-4555d5c593c9/resourceGroups/wordbuilder_group/providers/Microsoft.Web/sites/wordbuilder",
+    "appService.deploySubpath": "dist/word-builder"
+}

@@ -5,11 +5,11 @@ import { WordService } from './word.service';
 
 @Component({
 	selector: 'app-root',
-	templateUrl: './app.component.html',
-	styleUrls: ['./app.component.css']
+	templateUrl: './word-builder.component.html',
+	styleUrls: ['./word-builder.component.css']
 })
 
-export class AppComponent {
+export class WordBuilderComponent {
 	constructor(public imageHelper: image, public word: WordService) { }
 	title = 'wordBuilder';
 
