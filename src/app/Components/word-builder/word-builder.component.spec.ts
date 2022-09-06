@@ -1,8 +1,9 @@
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { image } from 'src/app/image';
 import { WordBuilderComponent } from './word-builder.component';
-import { image } from './image';
+
 
 describe('WordBuilderComponent', () => {
 	beforeEach(async () => {

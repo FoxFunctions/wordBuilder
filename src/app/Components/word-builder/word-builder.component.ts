@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
-import { image } from './image';
-import { WordService } from './word.service';
+import { image } from 'src/app/image';
+import { WordService } from 'src/app/Services/word-service/word.service';
+
 
 @Component({
 	selector: 'app-root',

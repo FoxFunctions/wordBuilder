@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { WordBuilderComponent } from './word-builder.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { image } from './image';
-import { WordService } from './word.service';
+import { WordBuilderComponent } from './Components/word-builder/word-builder.component';
+import { WordService } from './Services/word-service/word.service';
 
 @NgModule({
 	declarations: [
