@@ -2,7 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
 
+## Project Description
+
 WordBuilder is a project that allows a user to drag alphabetical tiles to form words. The user will be prompted to spell the word that best describes an image that is presented on the screen. If the user spells the word correctly, they will be able to move on to the next image. 
+
+## Design notes
 
 -- Uses the Angular Material `DragDropModule` to perform Drag & Drop functions. 
 
@@ -15,9 +19,9 @@ spelled correctly, the `isCorrectSpelling` boolean becomes true and allows the *
 
 -- New icons are presented by changing the values defined in the `placeHolderHelperIcon` object defined in the `image.ts` class. This is accomplished by the `iconIterator()` function which is also in the `image.ts` class.
 
-The icon objects that are defined in the image class were sourced from [The Noun Project](https://thenounproject.com/) these icons are free to use for educational and personal projects.
+## Icon Credit to Designers
 
-Icon Credit to Designers:
+The icon objects that are defined in the image class were sourced from [The Noun Project](https://thenounproject.com/) these icons are free to use for educational and personal projects.
 
 [Car](https://thenounproject.com/iahmadali26)
 
